@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1600x800'); /* Replace with your own image URL */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #555;
+}
+
+/* Sections common styles */
+section {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Features and Services section styles */
+.feature, .service, .portfolio-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature img, .portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature h3, .service h3, .portfolio-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature p, .service p, .portfolio-item p {
+    font-size: 1.1em;
+}
+
+/* Contact section styles */
+.contact {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact input,
+.contact textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+</style>
+<body>
+    <header>
+        <%- include('partials/nav') %>
+        <div class="hero">
+            <div class="container">
+                <h1>Welcome to Our Website</h1>
+                <p>Discover amazing things.</p>
+                <a href="#services" class="btn">Explore More</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature">
+                <img src="https://via.placeholder.com/400" alt="Feature 1">
+                <h3>Feature 1</h3>
+                <p>Description of Feature 1.</p>
+            </div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/400" alt="Feature 2">
+                <h3>Feature 2</h3>
+                <p>Description of Feature 2.</p>
+            </div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/400" alt="Feature 3">
+                <h3>Feature 3</h3>
+                <p>Description of Feature 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Service 1</h3>
+                <p>Description of Service 1.</p>
+            </div>
+            <div class="service">
+                <h3>Service 2</h3>
+                <p>Description of Service 2.</p>
+            </div>
+            <div class="service">
+                <h3>Service 3</h3>
+                <p>Description of Service 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400" alt="Portfolio Item 1">
+                <h3>Project Title</h3>
+                <p>Description of Project.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400" alt="Portfolio Item 2">
+                <h3>Project Title</h3>
+                <p>Description of Project.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400" alt="Portfolio Item 3">
+                <h3>Project Title</h3>
+                <p>Description of Project.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="/contact" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+    <br>
+    <h2>hyy <%= user.name %></h2>
+    <br>
+    <br>
+    <h1>your father Name is : <%= user.fathername %></h1>
+
+    <br>
+    <h2>Your registered Email and Phone No is <%= user.email %> and <%= user.phone %></h2>
+    
+    <% if (user.profileImage) { %>
+        <img style="height: 50px;" src="http://localhost:8000/uploads/<%=user.profileImage%>" alt="Profile Image">
+    <% } else { %>
+        <p>No profile image available</p>
+    <% } %>
+</body>
+</html>
